@@ -68,27 +68,26 @@ function findInvalidCards(nestedArr) {
 
 function idInvalidCardCompanies(nestedArr) {
   let arrOfCompanies = [];
-  return nestedArr.map((arr) => {
+  nestedArr.map((arr) => {
     if (arr[0] === 3) {
-      if (!arrOfCompanies.includes('AmericanExpress')) {
+      if (!arrOfCompanies.includes("American Express")) {
         arrOfCompanies.push("American Express");
       }
     } else if (arr[0] === 4) {
-      if (!arrOfCompanies.includes('Visa')) {
+      if (!arrOfCompanies.includes("Visa")) {
         arrOfCompanies.push("Visa");
       }
     } else if (arr[0] === 5) {
-      if (!arrOfCompanies.includes('Mastercard')) {
-      arrOfCompanies.push("Mastercard");
+      if (!arrOfCompanies.includes("Mastercard")) {
+        arrOfCompanies.push("Mastercard");
       }
     } else if (arr[0] === 6) {
-      arrOfCompanies.push("Discover");
+      if (!arrOfCompanies.includes("Discover")) {
+        arrOfCompanies.push("Discover");
+      }
     } else {
       arrOfCompanies.push("Company not found");
     }
-    arrOfCompanies.map((arr)=>{
-      if ()
-    })
   });
-
+  return arrOfCompanies;
 }
