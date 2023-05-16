@@ -55,3 +55,13 @@ function validateCred(arr) {
   const sumOfArr = reversedArr.reduce((acc, cur) => acc + cur);
   return sumOfArr % 10 === 0 ? true : false;
 }
+
+function findInvalidCards(nestedArr) {
+  let invalidCardsArr = [];
+  return nestedArr.map((arr, i) => {
+    if (!validateCred(arr)) {
+      invalidCardsArr.push(arr);
+    }
+    return invalidCardsArr;
+  });
+}
