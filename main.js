@@ -65,3 +65,30 @@ function findInvalidCards(nestedArr) {
     return invalidCardsArr;
   });
 }
+
+function idInvalidCardCompanies(nestedArr) {
+  let arrOfCompanies = [];
+  return nestedArr.map((arr) => {
+    if (arr[0] === 3) {
+      if (!arrOfCompanies.includes('AmericanExpress')) {
+        arrOfCompanies.push("American Express");
+      }
+    } else if (arr[0] === 4) {
+      if (!arrOfCompanies.includes('Visa')) {
+        arrOfCompanies.push("Visa");
+      }
+    } else if (arr[0] === 5) {
+      if (!arrOfCompanies.includes('Mastercard')) {
+      arrOfCompanies.push("Mastercard");
+      }
+    } else if (arr[0] === 6) {
+      arrOfCompanies.push("Discover");
+    } else {
+      arrOfCompanies.push("Company not found");
+    }
+    arrOfCompanies.map((arr)=>{
+      if ()
+    })
+  });
+
+}
